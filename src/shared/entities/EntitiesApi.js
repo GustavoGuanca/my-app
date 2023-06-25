@@ -4,7 +4,6 @@ const EntitiesApi = {
   get: (endpoint, id) => {
     let url = endpoint 
     if(id) { url += '/' + id }
-    console.log(url)
     return Request.get(url)
       .then(response => { 
         return response.data })
@@ -24,7 +23,7 @@ const EntitiesApi = {
     }
   },
   delete: (endpoint, id) => {
-    return Request.delete(endpoint + id, {})
+    return Request.destroy(endpoint + '/' + id, {})
       .then(response => { return response.data })
       .catch(error => { throw error })
   },

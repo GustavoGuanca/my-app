@@ -1,4 +1,6 @@
 import { HomeOutlined, DollarCircleOutlined, GlobalOutlined, DatabaseOutlined } from '@ant-design/icons';
+import HomePage from '../../../home/HomePage';
+
 
 const routes = [
   {
@@ -8,7 +10,7 @@ const routes = [
     url: '/home',
     menu: true,
     icon: <HomeOutlined />,
-    //element: <HomePage />
+    element: <HomePage />
   },
   {
     key: 'ventas',

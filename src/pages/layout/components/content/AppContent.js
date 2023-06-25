@@ -3,7 +3,7 @@ const { Content} = Layout;
 
 const AppContent = () =>{
     return (
-        <Layout>
+     
           <Content
             style={{
               position: 'sticky',
@@ -19,7 +19,7 @@ const AppContent = () =>{
           </Content>
           
          
-        </Layout>
+     
       );
     };
 
