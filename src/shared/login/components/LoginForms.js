@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Form, Card, Input, Button } from "antd";
 import LoginApi from "../api/LoginApi";
+import './LoginForm.css'
 
 const FormItem = Form.Item;
 
@@ -23,7 +24,7 @@ const LoginForm = () => {
 
   return (
     <Card bordered={true}>
-      <Form
+      <Form className="transparent-form"
         name="basic"
         initialValues={{ remember: true }}
         labelAlign="left"

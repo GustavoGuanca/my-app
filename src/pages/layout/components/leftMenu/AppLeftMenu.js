@@ -1,7 +1,7 @@
 import { React, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Layout, Menu } from 'antd'
-import logo from '../../assets/Logo.png'
+import logo from '../../assets/LogoLectura.png'
 import routes from '../routes/AppRoutes'
 
 import './AppLeftMenu.scss'
