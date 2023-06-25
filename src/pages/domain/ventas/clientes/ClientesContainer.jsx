@@ -12,7 +12,7 @@ const ClientesContainer = props => {
     entidad && <DescItem label="CategoriaIva"> {entidad.categoriaiva.name} </DescItem>
 
   const entityDefinition = {
-    metadata: { endpoint: '/cliente', modulo: '', entidad: 'Cliente', referencia: 'cliente' },
+    metadata: { endpoint: '/cliente', modulo: '', entidad: 'Cliente', referencia: 'cliente'},
     columns: [
       { title: 'Nombre', dataIndex: 'name', key: 'name' },
       { title: 'CategoriaIva', dataIndex: ['categoriaiva', 'name'], key: 'categoriaiva' },

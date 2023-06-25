@@ -7,10 +7,10 @@ import './AppHeader.scss'
 const { Header} = Layout;
 
 const imagenes = {
-  height:'50px',
-  paddingTop:'20px',
+  height:'42px',
+  paddingTop:'3px',
   margin: '4px',
-  paddingBottom: '0%'
+  paddingBottom: '2%'
 }
 
 const AppHeader = () => {
@@ -21,16 +21,16 @@ const AppHeader = () => {
         top: 0,
         zIndex: 1,
         width: '100%',
-        display: 'flex',
-        alignItems: 'center',
-        height:'59px'
+        display: 'flex', 
+        justifyContent: 'flex-end',
+        height:'50px'
       }}
     >
       <div className="demo-logo" />
       <div>
-        <img src={face} style={imagenes}/>
-        <img src={insta} style={imagenes}/>
-        <img src={twitter} style={imagenes}/>
+        <img src={face} style={imagenes} className='img1'/>
+        <img src={insta} style={imagenes} className='img2'/>
+        <img src={twitter} style={imagenes} className='img3'/>
       </div>
         {/* <Space wrap>
         <Button type="primary" style={{

@@ -1,5 +1,5 @@
 export const AppConfig = {
-  siteName: 'Sistema Administracion Integrado'
+  siteName: 'Tienda de Libros'
 }
 
 export const Backend = {
