@@ -22,7 +22,7 @@ const routes = [
         key: 'libros',
         role: 'admin, user, venderor',
         label: 'Libros',
-        url: '/libros',
+        url: '/home',
         menu: true,
         icon: <BookOutlined />,
         //element: <HomePage />
@@ -46,7 +46,7 @@ const routes = [
         //  element: <ClientesContainer />
       },
       {
-        key: 'ventasRealizadas',
+        key: 'ventas',
         role: 'admin, vendedor',
         label: 'Ventas Realizadas',
         url: '/ventas',
@@ -80,7 +80,7 @@ const routes = [
         //element: <CategoriaIvasContainer />
       },
       {
-        key: 'admLibris',
+        key: 'libros',
         role: 'admin, vendedores',
         label: 'Libros',
         url: '/libros',

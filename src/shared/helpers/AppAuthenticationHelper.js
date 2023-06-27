@@ -1,6 +1,7 @@
 import jwtDecode from 'jwt-decode';
 
 
+
 const getUser = () => {
   return sessionStorage.getItem('name');
 };
