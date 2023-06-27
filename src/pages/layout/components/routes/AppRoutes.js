@@ -1,9 +1,9 @@
-import { HomeOutlined, DollarCircleOutlined, GlobalOutlined, DatabaseOutlined } from '@ant-design/icons';
+import { HomeOutlined, DollarCircleOutlined, GlobalOutlined,UserOutlined, DatabaseOutlined, BookOutlined} from '@ant-design/icons';
 
 const routes = [
   {
     key: 'home',
-    role: 'admin, user',
+    role: 'admin, user, vendedor',
     label: 'Inicio',
     url: '/home',
     menu: true,
@@ -11,8 +11,27 @@ const routes = [
     //element: <HomePage />
   },
   {
+    key: 'productos',
+    role: 'admin',
+    label: 'Productos',
+    url: '/productos',
+    menu: true,
+    icon: <BookOutlined />,
+    children: [
+      {
+        key: 'libros',
+        role: 'admin, user, venderor',
+        label: 'Libros',
+        url: '/libros',
+        menu: true,
+        icon: <BookOutlined />,
+        //element: <HomePage />
+      }
+    ]
+  },
+  {
     key: 'ventas',
-    role: 'admin, vendor',
+    role: 'admin, vendedor',
     label: 'Ventas',
     url: '/cajas',
     menu: true,
@@ -20,27 +39,51 @@ const routes = [
     children: [
       {
         key: 'clientes',
-        role: 'admin, vendor',
+        role: 'admin, vendedor',
         label: 'Clientes',
         url: '/clientes',
-        icon: <GlobalOutlined />,
+        icon: <UserOutlined />,
+        //  element: <ClientesContainer />
+      },
+      {
+        key: 'ventasRealizadas',
+        role: 'admin, vendedor',
+        label: 'Ventas Realizadas',
+        url: '/ventas',
+        icon: <DollarCircleOutlined />,
       //  element: <ClientesContainer />
       }
     ]
   },
   {
     key: 'parametricas',
-    role: 'admin',
+    role: 'admin, vendedor',
     label: 'Administración',
     url: '/parametricas',
     menu: true,
     icon: <DatabaseOutlined />,
     children: [
       {
-        key: 'categoriaivas',
+        key: 'editoriales',
         role: 'admin',
-        label: 'Categoria Iva',
-        url: '/categoriaivas',
+        label: 'Editoriales',
+        url: '/editoriales',
+        icon: <GlobalOutlined />,
+        //element: <CategoriaIvasContainer />
+      },
+      {
+        key: 'generos',
+        role: 'admin',
+        label: 'Generos',
+        url: '/generos',
+        icon: <GlobalOutlined />,
+        //element: <CategoriaIvasContainer />
+      },
+      {
+        key: 'admLibris',
+        role: 'admin, vendedores',
+        label: 'Libros',
+        url: '/libros',
         icon: <GlobalOutlined />,
         //element: <CategoriaIvasContainer />
       }

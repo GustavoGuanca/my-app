@@ -1,8 +1,13 @@
-import { Layout} from 'antd';
+import { Layout, Popover, Tooltip} from 'antd';
 import face from '../../assets/facebook.png'
 import insta from '../../assets/instagram.png'
 import twitter from '../../assets/twitter.png'
+import { useNavigate } from 'react-router-dom';
+import { Button, Space } from 'antd';
+import { AppConfig } from '../../../../shared/config/GlobalConfig';
+import AppAuthenticationHelper from '../../../../shared/helpers/AppAuthenticationHelper';
 import './AppHeader.scss'
+
 // import { Button, Space } from 'antd';
 const { Header} = Layout;
 
@@ -14,6 +19,12 @@ const imagenes = {
 }
 
 const AppHeader = () => {
+  let navigate = useNavigate()
+  const logOut = () => {
+    AppAuthenticationHelper.removeJwtToken()
+    navigate('/login')
+  }
+
   return (
     <Header
       style={{
@@ -26,19 +37,21 @@ const AppHeader = () => {
         height:'50px'
       }}
     >
-      <div className="demo-logo" />
-      <div>
-        <img src={face} style={imagenes} className='img1'/>
-        <img src={insta} style={imagenes} className='img2'/>
-        <img src={twitter} style={imagenes} className='img3'/>
-      </div>
-        {/* <Space wrap>
-        <Button type="primary" style={{
-          display:'flex',
-          alignItems:'right',
-          background:'#4e5861'
-        }}>Ingresar</Button>
-      </Space>  */}
+        <h2>{AppConfig.siteName}</h2>
+        <a href='https://www.facebook.com/paularmercado/'>
+          <img src={face} style={imagenes} />
+        </a>
+        <a href=''>
+          <img src={insta} style={imagenes} />
+        </a>
+        <a href=''>
+          <img src={twitter} style={imagenes} />   
+        </a>
+        <Button
+          type='primary'
+          className='salir'
+          onClick={logOut}
+        >Salir</Button>
     </Header>
   );
 };
