@@ -8,11 +8,14 @@ const DescItem = Descriptions.Item
 
 const VentasContainer = props => {
   const viewDefinition = entidad =>
-    entidad && <DescItem label="idLibro"> {entidad.libros.id} </DescItem>
-    entidad && <DescItem label="idCliente"> {entidad.clientes.id} </DescItem>
-    entidad && <DescItem label="Cantidad"> {entidad.cantidad} </DescItem>
-    entidad && <DescItem label="Fecha"> {entidad.fecha} </DescItem>
-    entidad && <DescItem label="Total"> {entidad.total} </DescItem>
+    entidad && <>
+      <DescItem label="idLibro"> {entidad.libros.id} </DescItem>
+      <DescItem label="idCliente"> {entidad.clientes.id} </DescItem>
+      <DescItem label="Cantidad"> {entidad.cantidad} </DescItem>
+      <DescItem label="Fecha"> {entidad.fecha} </DescItem>
+      <DescItem label="Total"> {entidad.total} </DescItem>
+    </>
+    
 
     const entityDefinition = {
         metadata: { endpoint: '/ventas', modulo: '', entidad: 'Ventas', referencia: 'ventas' },

@@ -1,4 +1,3 @@
-import React from 'react'
 import { Descriptions } from 'antd'
 import AppEnableTag from '../../../../shared/components/AppEnableTag'
 import SelectItem from '../../../../shared/entities/components/form/formItems/AppSelectItem'
@@ -7,9 +6,9 @@ import EntitiesContainer from '../../../../shared/entities/EntitiesContainer'
 const DescItem = Descriptions.Item
 
 const ClientesContainer = props => {
+
   const viewDefinition = entidad =>
     entidad && <DescItem label="Nombre"> {entidad.name} </DescItem>
-    entidad && <DescItem label="CategoriaIva"> {entidad.categoriaiva.name} </DescItem>
 
   const entityDefinition = {
     metadata: { endpoint: '/cliente', modulo: '', entidad: 'Cliente', referencia: 'cliente'},
@@ -27,10 +26,10 @@ const ClientesContainer = props => {
         { key: 'categoriaiva_id', label: 'CategoriaIva', widget: SelectItem,
         rules: [{ required: true, message: 'Campo Requerido' }],
         widgetProps: { referencia: 'categoriaiva_id', endpoint: 'categoriaiva', isShow: false } }
-
       ]},
     viewDefinition: viewDefinition,
   }
+  
   return <EntitiesContainer
     {...props}
     entityDefinition={entityDefinition} />

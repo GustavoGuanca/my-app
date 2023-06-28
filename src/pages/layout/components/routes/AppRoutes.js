@@ -1,4 +1,10 @@
 import { HomeOutlined, DollarCircleOutlined, GlobalOutlined,UserOutlined, DatabaseOutlined, BookOutlined} from '@ant-design/icons';
+import LibrosContainer from '../../../domain/ventas/libros/LibrosContainer';
+import ClientesContainer from '../../../domain/ventas/clientes/ClientesContainer';
+import EditorialesContainer from '../../../domain/parametricas/editoriales/EditorialesContainer';
+import GenerosContainer from '../../../domain/parametricas/generos/GenerosContainer';
+import VentasContainer from '../../../domain/ventas/ventas/VentasContainer';
+import HomePage from '../../../home/HomePage'
 
 const routes = [
   {
@@ -8,7 +14,7 @@ const routes = [
     url: '/home',
     menu: true,
     icon: <HomeOutlined />,
-    //element: <HomePage />
+    element: <HomePage />
   },
   {
     key: 'productos',
@@ -43,7 +49,7 @@ const routes = [
         label: 'Clientes',
         url: '/clientes',
         icon: <UserOutlined />,
-        //  element: <ClientesContainer />
+        element: <ClientesContainer />
       },
       {
         key: 'ventas',
@@ -51,7 +57,7 @@ const routes = [
         label: 'Ventas Realizadas',
         url: '/ventas',
         icon: <DollarCircleOutlined />,
-      //  element: <ClientesContainer />
+        element: <VentasContainer />
       }
     ]
   },
@@ -69,7 +75,7 @@ const routes = [
         label: 'Editoriales',
         url: '/editoriales',
         icon: <GlobalOutlined />,
-        //element: <CategoriaIvasContainer />
+        element: <EditorialesContainer />
       },
       {
         key: 'generos',
@@ -77,15 +83,15 @@ const routes = [
         label: 'Generos',
         url: '/generos',
         icon: <GlobalOutlined />,
-        //element: <CategoriaIvasContainer />
+        element: <GenerosContainer />
       },
       {
         key: 'libros',
         role: 'admin, vendedores',
         label: 'Libros',
-        url: '/libros',
+        url: '/',
         icon: <GlobalOutlined />,
-        //element: <CategoriaIvasContainer />
+        element: <LibrosContainer />
       }
     ]
   }

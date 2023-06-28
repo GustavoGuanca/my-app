@@ -3,7 +3,7 @@ export const AppConfig = {
 }
 
 export const Backend = {
-  url: 'localhost:8000/api/v1'
+  url: 'localhost:8000'
 }
 
 export const FormConfig = {

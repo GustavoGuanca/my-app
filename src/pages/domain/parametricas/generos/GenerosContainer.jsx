@@ -7,6 +7,7 @@ import EntitiesContainer from '../../../../shared/entities/EntitiesContainer'
 const DescItem = Descriptions.Item
 
 const GenerosContainer = props => {
+  
     const viewDefinition = entidad =>
     entidad && <DescItem label="Nombre"> {entidad.name} </DescItem>
 
@@ -22,6 +23,7 @@ const GenerosContainer = props => {
         ]},
     viewDefinition: viewDefinition,
   }
+
   return <EntitiesContainer
     {...props}
     entityDefinition={entityDefinition} />

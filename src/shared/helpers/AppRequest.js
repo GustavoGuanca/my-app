@@ -3,8 +3,8 @@ import AppAuthenticationHelper from './AppAuthenticationHelper.js'
 import { Backend } from '../config/GlobalConfig'
 import { notification } from 'antd'
 
-axios.defaults.baseURL = `${window.location.protocol}//${window.location.host}/api/`
-axios.defaults.baseURL = `${window.location.protocol}//localhost:8000/api`
+// axios.defaults.baseURL = `${window.location.protocol}//${window.location.host}/api/`
+// axios.defaults.baseURL = `${window.location.protocol}//localhost:8000`
 axios.defaults.baseURL = `${window.location.protocol}//${Backend.url}`
 
 

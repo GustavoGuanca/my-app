@@ -8,11 +8,14 @@ const DescItem = Descriptions.Item
 
 const LibrosContainer = props => {
   const viewDefinition = entidad =>
-    entidad && <DescItem label="Nombre"> {entidad.name} </DescItem>
-    entidad && <DescItem label="idGenero"> {entidad.generos.id} </DescItem>
-    entidad && <DescItem label="idEditorial"> {entidad.editoriales.id} </DescItem>
-    entidad && <DescItem label="Stock"> {entidad.stock} </DescItem>
-    entidad && <DescItem label="Precio"> {entidad.precio} </DescItem>
+    entidad && <>
+      <DescItem label="Nombre"> {entidad.name} </DescItem>
+      <DescItem label="idGenero"> {entidad.generos.id} </DescItem>
+      <DescItem label="idEditorial"> {entidad.editoriales.id} </DescItem>
+      <DescItem label="Stock"> {entidad.stock} </DescItem>
+      <DescItem label="Precio"> {entidad.precio} </DescItem>
+    </> 
+    
 
 
     const entityDefinition = {
