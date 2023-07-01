@@ -1,8 +1,8 @@
 import { useLocation } from 'react-router-dom'
 import EntityForm from './components/form/EntityForm'
-import EntityList from './components/form/EntityList'
+import EntityList from './components/list/EntityList'
 
-const EntitiesContainer = () => {
+const EntitiesContainer = props => {
 
     let path = useLocation().pathname
 

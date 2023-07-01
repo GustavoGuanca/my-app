@@ -1,10 +1,10 @@
 import React from 'react';
 import AuthenticationHelper from '../../shared/helpers/AppAuthenticationHelper';
+import AppCarrusel from '../layout/components/content/AppCarrousell'
 
 const HomePage = () => (
   <>
-    <h1> HOME PAGE </h1>
-    <p> Bienvenido: <b>{AuthenticationHelper.getUser()}</b> </p>
+    <AppCarrusel/>
   </>
 );
 
