@@ -1,25 +1,25 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { Form, Card, Input, Button } from "antd";
-import LoginApi from "../api/LoginApi";
+import { useState } from "react"
+import { useNavigate } from "react-router-dom"
+import { Form, Card, Input, Button } from "antd"
+import LoginApi from "../api/LoginApi"
 
-const FormItem = Form.Item;
+const FormItem = Form.Item
 
 const LoginForm = () => {
-  const navigate = useNavigate();
-  const [working, setWorking] = useState(false);
+  const navigate = useNavigate()
+  const [working, setWorking] = useState(false)
 
   const onFinish = (values) => {
-    setWorking(true);
+    setWorking(true)
     LoginApi.Login(values.email, values.password)
       .then((response) => {
-        setWorking(false);
-        navigate("/home", { replace: true });
+        setWorking(false)
+        navigate("/home", { replace: true })
       })
       .catch((error) => {
-        navigate("/login");
-      });
-  };
+        navigate("/login")
+      })
+  }
 
   return (
     <Card bordered={true} style={{width:'40%', marginLeft:'410px', marginTop:'50px'}}>
@@ -52,7 +52,7 @@ const LoginForm = () => {
         </FormItem>
       </Form>
     </Card>
-  );
-};
+  )
+}
 
-export default LoginForm;
+export default LoginForm

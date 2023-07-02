@@ -1,10 +1,10 @@
-import { Layout } from "antd";
-import AppLeftMenu from "./components/leftMenu/AppLeftMenu";
-import AppHeader from "./components/header/AppHeader";
-import AppBanner from "./components/banner/AppBanner";
-import AppContent from "./components/content/AppContent";
-import AppFooter from "./components/footer/AppFooter";
-import "./AppLayout.scss";
+import { Layout } from "antd"
+import AppLeftMenu from "./components/leftMenu/AppLeftMenu"
+import AppHeader from "./components/header/AppHeader"
+import AppBanner from "./components/banner/AppBanner"
+import AppContent from "./components/content/AppContent"
+import AppFooter from "./components/footer/AppFooter"
+import "./AppLayout.scss"
 
 const AppLayout = () => 
     <Layout style={{ minHeight: "100vh" }}>
@@ -17,4 +17,4 @@ const AppLayout = () =>
       </Layout>
     </Layout>
 
-export default AppLayout;
+export default AppLayout

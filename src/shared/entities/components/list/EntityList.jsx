@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { useLocation, useNavigate } from "react-router-dom"
-import { Table, Button, Space, Input } from "antd"
-import { PlusOutlined } from '@ant-design/icons';
+import { Table, Button, Input } from "antd"
+import { PlusOutlined } from '@ant-design/icons'
 import { PageHeader } from '@ant-design/pro-layout'
 import EntitiesApi from "../../api/EntitiesApi"
 import EntitiesView from '../view/EntityView'
@@ -53,15 +53,6 @@ const EntityList = props => {
         .catch(error => setWorking(false))
     }
 
-    const toggleHabilitado = record => {
-        setWorking(true)
-        EntitiesApi.habilitar(props.entityDefinition.metadata.endpoint, record.id, !record.habilitado)
-        .then(response => {
-            setWorking(false)
-            loadEntidades()
-        })
-        .catch(error => setWorking(false))
-    }
 
     const deleteEtidad = record => {
         setWorking(true)

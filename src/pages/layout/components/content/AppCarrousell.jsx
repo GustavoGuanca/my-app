@@ -1,10 +1,9 @@
-import React from 'react';
-import { Row, Col, Layout, Input} from 'antd';
-import { Carousel } from 'antd';
-import imgCarrusel1 from '../../assets/urano_meet_Las_3_despedidas_de_Georg_Kahn.png';
-import imgCarrusel2 from '../../assets/carrusel2.jpg';
-import imgCarrusel3 from '../../assets/carrusel3.png';
+import { Row, Col, Layout, Input} from 'antd'
+import { Carousel } from 'antd'
 //#region importación de imagenes
+import imgCarrusel1 from '../../assets/urano_meet_Las_3_despedidas_de_Georg_Kahn.png'
+import imgCarrusel2 from '../../assets/carrusel2.jpg'
+import imgCarrusel3 from '../../assets/carrusel3.png'
 import libro1 from '../../assets/libros/libro1.png'
 import libro2 from '../../assets/libros/libro2.png'
 import libro3 from '../../assets/libros/libro3.png'
@@ -16,8 +15,8 @@ import libro8 from '../../assets/libros/libro8.png'
 import libro9 from '../../assets/libros/libro9.png'
 //#endregion
 import './AppContent.scss'
-const {Content} = Layout;
-const { Search } = Input;
+const {Content} = Layout
+const { Search } = Input
 
 const AppContent = () => {
   return (
@@ -116,7 +115,7 @@ const AppContent = () => {
         </Row>
       </div>
     </Content>
-  );
-};
+  )
+}
 
-export default AppContent;
+export default AppContent

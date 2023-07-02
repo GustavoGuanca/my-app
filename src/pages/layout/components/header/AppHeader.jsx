@@ -1,15 +1,13 @@
-import { Layout } from 'antd';
+import { Layout, Button } from 'antd'
 import face from '../../assets/facebook.png'
 import insta from '../../assets/instagram.png'
 import twitter from '../../assets/twitter.png'
-import { useNavigate } from 'react-router-dom';
-import { Button } from 'antd';
-import { AppConfig } from '../../../../shared/config/GlobalConfig';
-import AppAuthenticationHelper from '../../../../shared/helpers/AppAuthenticationHelper';
+import { useNavigate } from 'react-router-dom'
+import { AppConfig } from '../../../../shared/config/GlobalConfig'
+import AppAuthenticationHelper from '../../../../shared/helpers/AppAuthenticationHelper'
 import './AppHeader.scss'
 
-// import { Button, Space } from 'antd';
-const { Header} = Layout;
+const { Header} = Layout
 
 const imagenes = {
   height:'42px',
@@ -53,6 +51,7 @@ const AppHeader = () => {
           onClick={logOut}
         >Salir</Button>
     </Header>
-  );
-};
-export default AppHeader;
+  )
+}
+
+export default AppHeader

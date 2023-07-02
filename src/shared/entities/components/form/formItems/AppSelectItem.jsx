@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { Form, Select } from 'antd'
 import { FormConfig } from '../../../../config/GlobalConfig'
 import EntidadesApi from '../../../api/EntitiesApi'

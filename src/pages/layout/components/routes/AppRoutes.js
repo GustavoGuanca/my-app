@@ -1,9 +1,9 @@
-import { HomeOutlined, DollarCircleOutlined, GlobalOutlined,UserOutlined, DatabaseOutlined, BookOutlined} from '@ant-design/icons';
-import LibrosContainer from '../../../domain/ventas/libros/LibrosContainer';
-import ClientesContainer from '../../../domain/ventas/clientes/ClientesContainer';
-import EditorialesContainer from '../../../domain/parametricas/editoriales/EditorialesContainer';
-import GenerosContainer from '../../../domain/parametricas/generos/GenerosContainer';
-import VentasContainer from '../../../domain/ventas/ventas/VentasContainer';
+import { HomeOutlined, DollarCircleOutlined, GlobalOutlined,UserOutlined, DatabaseOutlined, BookOutlined} from '@ant-design/icons'
+import LibrosContainer from '../../../domain/ventas/libros/LibrosContainer'
+import ClientesContainer from '../../../domain/ventas/clientes/ClientesContainer'
+import EditorialesContainer from '../../../domain/parametricas/editoriales/EditorialesContainer'
+import GenerosContainer from '../../../domain/parametricas/generos/GenerosContainer'
+import VentasContainer from '../../../domain/ventas/ventas/VentasContainer'
 import HomePage from '../../../home/HomePage'
 
 const routes = [
@@ -31,7 +31,7 @@ const routes = [
         url: '/home',
         menu: true,
         icon: <BookOutlined />,
-        //element: <HomePage />
+        element: <HomePage />
       }
     ]
   },
@@ -89,12 +89,12 @@ const routes = [
         key: 'libros',
         role: 'admin, vendedores',
         label: 'Libros',
-        url: '/',
+        url: '/libros',
         icon: <GlobalOutlined />,
         element: <LibrosContainer />
       }
     ]
   }
-];
+]
 
-export default routes;
+export default routes

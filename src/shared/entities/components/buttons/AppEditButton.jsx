@@ -1,13 +1,13 @@
 import { Button, Tooltip } from 'antd'
-import { EyeOutlined } from '@ant-design/icons'
+import { EditOutlined } from '@ant-design/icons'
 
 const AppEditButton = props =>
-    <Tooltip title={ props.title ? props.title : 'Ver'}>
+    <Tooltip title={ props.title ? props.title : 'Editar'}>
         <Button 
             type='primary'
             shape='circle'
             size='small'
-            icon={props.icon ? props.icon : <EyeOutlined/>}/>
+            icon={props.icon ? props.icon : <EditOutlined/>}/>
     </Tooltip>
 
 export default AppEditButton

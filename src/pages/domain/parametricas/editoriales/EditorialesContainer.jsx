@@ -1,7 +1,4 @@
-import React from 'react'
 import { Descriptions } from 'antd'
-//import AppEnableTag from '../../../../shared/components/AppEnableTag'
-//import SelectItem from '../../../../shared/entities/components/form/formItems/AppSelectItem'
 import EntitiesContainer from '../../../../shared/entities/EntitiesContainer'
 
 const DescItem = Descriptions.Item

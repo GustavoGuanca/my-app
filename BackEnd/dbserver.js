@@ -1,12 +1,12 @@
 // get the client
-const mysql = require('mysql2');
+const mysql = require('mysql2')
 const express = require('express')
-const bodyParser = require ('body-parser');
-const PORT = process.env.PORT || 8000;
-const app = express();
-const bcrypt =require('bcrypt');
+const bodyParser = require ('body-parser')
+const PORT = process.env.PORT || 8000
+const app = express()
+const bcrypt =require('bcrypt')
 app.use(bodyParser.json())
-
+app.use(express.json())
 
 // create the connection to database
 const connection = mysql.createPool({
@@ -14,7 +14,7 @@ const connection = mysql.createPool({
   user: 'root',
   password:'1234',
   database: 'ventalibros'
-});
+})
 
 connection.getConnection ((err, connection) => {
     if(err) throw (err)
@@ -29,7 +29,36 @@ app.get('/', (req, resp) => {
 
 console.log('Api funcionando y esperando peticiones en puerto ', PORT)
 
-
+app.post('/createUser', async (req, res) => {
+    const user = req.body.name
+    const hashedPasword = await bcrypt.hash(req.body.password, 10)
+    dblClick.getConnection(async (err, connection) => {
+        if (err) throw (err)
+        const sqlSearch = 'SELECT * FROM usuarios WHERE user = ?'
+        const search_query = mysql.format(sqlSearch, [user])
+        const sqlInsert = 'INSERT INTO usuariarios VALUES (0,?,?)'
+        const insert_query = mysql.format(sqlInsert, [user, hashedPasword])
+        
+        await connection.query(search_query, async (err, result) => {
+            if (err) throw (err)
+            console.log('------> Buscando Resultados')
+            console.log(result.length)
+            if (result.length != 0) {
+                connection.release()
+                console.log('-------> Usuario ya existe')
+                res.sendStatus(409)
+            } else {
+                await connection.query(insert_query, (err, result) => {
+                    connection.release()
+                    if (err) throw (err)
+                    console.log('--------> Nuevo Usuario Creado')
+                    console.log(result.insertId)
+                    res.sendStatus(201)
+                })
+            }
+        })
+    })
+})
 
 //#region GET
 

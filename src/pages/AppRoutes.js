@@ -1,6 +1,5 @@
-import React from 'react'
 import HomePage from '../../../home/HomePage'
-import { HomeOutlined, DollarCircleOutlined, GlobalOutlined, DatabaseOutlined } from '@ant-design/icons';
+import { HomeOutlined, DollarCircleOutlined, GlobalOutlined, DatabaseOutlined } from '@ant-design/icons'
 import CategoriaIvasContainer from '../../../domain/parametricas/categoriaivas/CategoriaIvasContainer'
 import ClientesContainer from '../../../domain/ventas/clientes/ClientesContainer'
 

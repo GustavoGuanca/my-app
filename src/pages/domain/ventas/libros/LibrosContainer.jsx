@@ -1,7 +1,5 @@
-import React from 'react'
 import { Descriptions } from 'antd'
 import AppEnableTag from '../../../../shared/components/AppEnableTag'
-//import SelectItem from '../../../../shared/entities/components/form/formItems/AppSelectItem'
 import EntitiesContainer from '../../../../shared/entities/EntitiesContainer'
 
 const DescItem = Descriptions.Item
@@ -15,9 +13,7 @@ const LibrosContainer = props => {
       <DescItem label="Stock"> {entidad.stock} </DescItem>
       <DescItem label="Precio"> {entidad.precio} </DescItem>
     </> 
-    
-
-
+ 
     const entityDefinition = {
         metadata: { endpoint: '/libros', modulo: '', entidad: 'Libros', referencia: 'libros' },
         columns: [
@@ -30,7 +26,7 @@ const LibrosContainer = props => {
         { title: 'Precio', dataIndex: 'precio', key: 'precio',
         render: text => <AppEnableTag value={text} />
         }],
-    formDefinition: {
+      formDefinition: {
       columns: 1,
       formItemLayout: null,
       fields: [
@@ -42,9 +38,13 @@ const LibrosContainer = props => {
       ]},
     viewDefinition: viewDefinition,
   }
-  return <EntitiesContainer
+  return <>
+  <EntitiesContainer
     {...props}
     entityDefinition={entityDefinition} />
+    <h1>HOLA</h1>
+  </>
+    
 }
 
 export default LibrosContainer
