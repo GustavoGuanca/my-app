@@ -25,7 +25,7 @@ const ClientesContainer = props => {
         { key: 'name', label: 'Nombre', clear: 'left', disabled: false },
         { key: 'categoriaiva_id', label: 'CategoriaIva', widget: SelectItem,
         rules: [{ required: true, message: 'Campo Requerido' }],
-        widgetProps: { referencia: 'categoriaiva_id', endpoint: 'categoriaiva', isShow: false } }
+        widgetProps: { referencia: 'categoriaiva_id', endpoint: 'categoriaiva' } }
       ]},
     viewDefinition: viewDefinition,
   }

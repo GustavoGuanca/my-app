@@ -13,8 +13,8 @@ const EntityList = props => {
 
     const navigate = useNavigate()
     const location = useLocation()
-    const[entidades, setEntidades] = useState({})
-    const[entidadesFiltrados, setEntidadesFiltrados] = useState({})
+    const[entidades, setEntidades] = useState([])
+    const[entidadesFiltrados, setEntidadesFiltrados] = useState([])
     const[working, setWorking] = useState(false)
     const[currentItem, setCurrentItem] = useState(undefined)
     const[showItem, setShowItem] = useState(false)
@@ -66,7 +66,7 @@ const EntityList = props => {
 
     return<div style={{backgroundColor:'#fff', height:'100%', padding:8}}>
         <PageHeader
-            ClassName='site-page-header'
+            className='site-page-header'
             title={props.entityDefinition.metadata.entidad}
             onBack={() => navigate(-1)}
             extra={[

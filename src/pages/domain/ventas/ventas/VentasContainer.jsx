@@ -34,8 +34,8 @@ const VentasContainer = props => {
       columns: 1,
       formItemLayout: null,
       fields: [
-          { key: 'libro', label: 'idLibro', clear: 'left', disabled: false, rules: [{ required: true, message: 'Campo Requerido' }],widgetProps: { referencia: 'id', endpoint: 'libros', isShow: false }},
-          { key: 'cliente', label: 'idCliente', clear: 'left', disabled: false, rules: [{ required: true, message: 'Campo Requerido' }],widgetProps: { referencia: 'id', endpoint: 'clientes', isShow: false }},
+          { key: 'libro', label: 'idLibro', clear: 'left', disabled: false, rules: [{ required: true, message: 'Campo Requerido' }],widgetProps: { referencia: 'id', endpoint: 'libros'}},
+          { key: 'cliente', label: 'idCliente', clear: 'left', disabled: false, rules: [{ required: true, message: 'Campo Requerido' }],widgetProps: { referencia: 'id', endpoint: 'clientes'}},
           { key: 'cantidad', label: 'Cantidad', clear: 'left', disabled: false, rules: [{ required: true, message: 'Campo Requerido' }]},
           { key: 'fecha', label: 'Fecha', clear: 'left', disabled: false, rules: [{ required: true, message: 'Campo Requerido' }]},
           { key: 'total', label: 'Total', clear: 'left', disabled: true, rules: [{ required: true, message: 'Campo Requerido' }]}

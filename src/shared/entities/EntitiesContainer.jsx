@@ -7,9 +7,11 @@ const EntitiesContainer = props => {
     let path = useLocation().pathname
 
     return <>
-        path.includes('/new') || path.includes('/edit') ?
-        <EntityForm {...props}/> 
-        : <EntityList {...props}/>
+        {
+            path.includes('/new') || path.includes('/edit') ?
+            <EntityForm {...props}/> 
+            : <EntityList {...props}/>
+        }
     </>
 }
 

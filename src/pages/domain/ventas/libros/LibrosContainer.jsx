@@ -31,8 +31,8 @@ const LibrosContainer = props => {
       formItemLayout: null,
       fields: [
         { key: 'nombre', label: 'Nombre', clear: 'left', disabled: false, rules: [{ required: true, message: 'Campo Requerido' }],},
-        { key: 'genero', label: 'idGenero', clear: 'left', disabled: false, rules: [{ required: true, message: 'Campo Requerido' }],widgetProps: { referencia: 'id', endpoint: 'generos', isShow: false }},
-        { key: 'editorial', label: 'idEditorial', clear: 'left', disabled: false, rules: [{ required: true, message: 'Campo Requerido' }],widgetProps: { referencia: 'id', endpoint: 'editoriles', isShow: false }},
+        { key: 'genero', label: 'idGenero', clear: 'left', disabled: false, rules: [{ required: true, message: 'Campo Requerido' }],widgetProps: { referencia: 'id', endpoint: 'generos' }},
+        { key: 'editorial', label: 'idEditorial', clear: 'left', disabled: false, rules: [{ required: true, message: 'Campo Requerido' }],widgetProps: { referencia: 'id', endpoint: 'editoriles' }},
         { key: 'stock', label: 'Stock', clear: 'left', disabled: false, rules: [{ required: true, message: 'Campo Requerido' }]},
         { key: 'precio', label: 'Precio', clear: 'left', disabled: false, rules: [{ required: true, message: 'Campo Requerido' }]}
       ]},

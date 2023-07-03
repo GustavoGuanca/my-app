@@ -36,7 +36,7 @@ const routes = [
     ]
   },
   {
-    key: 'ventas',
+    key: 'menuVentas',
     role: 'admin, vendedor',
     label: 'Ventas',
     url: '/cajas',
