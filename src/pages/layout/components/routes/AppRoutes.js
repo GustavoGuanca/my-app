@@ -25,7 +25,7 @@ const routes = [
     icon: <BookOutlined />,
     children: [
       {
-        key: 'libros',
+        key: 'librosHome',
         role: 'admin, user, venderor',
         label: 'Libros',
         url: '/home',

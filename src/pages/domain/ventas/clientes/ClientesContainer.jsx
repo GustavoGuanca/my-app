@@ -1,5 +1,4 @@
 import { Descriptions } from 'antd'
-import AppEnableTag from '../../../../shared/components/AppEnableTag'
 import SelectItem from '../../../../shared/entities/components/form/formItems/AppSelectItem'
 import EntitiesContainer from '../../../../shared/entities/EntitiesContainer'
 
@@ -15,9 +14,7 @@ const ClientesContainer = props => {
     columns: [
       { title: 'Nombre', dataIndex: 'name', key: 'name' },
       { title: 'CategoriaIva', dataIndex: ['categoriaiva', 'name'], key: 'categoriaiva' },
-      { title: 'Estado', dataIndex: 'estado', key: 'estado',
-        render: text => <AppEnableTag value={text} />
-      }],
+      { title: 'Estado', dataIndex: 'estado', key: 'estado' }],
     formDefinition: {
       columns: 1,
       formItemLayout: null,

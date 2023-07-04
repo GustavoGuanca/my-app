@@ -1,10 +1,10 @@
-import banner from '../../assets/banner-superior.jpg'
+import banner from '../../assets/banner.jpg'
 
 
 const AppBanner = () => {
   return (
     <div>
-        <img src={banner} style={{width:'100%'}}/>
+        <img src={banner} style={{height: '265px', width:'100%'}}/>
     </div>
   )
 }

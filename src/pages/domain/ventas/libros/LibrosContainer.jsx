@@ -1,5 +1,4 @@
 import { Descriptions } from 'antd'
-import AppEnableTag from '../../../../shared/components/AppEnableTag'
 import EntitiesContainer from '../../../../shared/entities/EntitiesContainer'
 
 const DescItem = Descriptions.Item
@@ -18,14 +17,11 @@ const LibrosContainer = props => {
         metadata: { endpoint: '/libros', modulo: '', entidad: 'Libros', referencia: 'libros' },
         columns: [
         { title: 'Nombre', dataIndex: 'nombre', key: 'nombre' },
-        { title: 'idGenero', dataIndex: ['generos', 'id'], key: 'genero' },
-        { title: 'idEditorial', dataIndex: ['editoriales', 'id'], key: 'editorial' },
-        { title: 'Stock', dataIndex: 'stock', key: 'stock',
-            render: text => <AppEnableTag value={text} />
-        },
-        { title: 'Precio', dataIndex: 'precio', key: 'precio',
-        render: text => <AppEnableTag value={text} />
-        }],
+        { title: 'idGenero', dataIndex: 'idGenero', key: 'genero' },
+        { title: 'idEditorial', dataIndex: 'idEditorial', key: 'editorial' },
+        { title: 'Stock', dataIndex: 'stock', key: 'stock' },
+        { title: 'Precio', dataIndex: 'precio', key: 'precio'},
+        { title: 'Autor', dataIndex: 'autor', key: 'autor' }],
       formDefinition: {
       columns: 1,
       formItemLayout: null,
@@ -34,7 +30,8 @@ const LibrosContainer = props => {
         { key: 'genero', label: 'idGenero', clear: 'left', disabled: false, rules: [{ required: true, message: 'Campo Requerido' }],widgetProps: { referencia: 'id', endpoint: 'generos' }},
         { key: 'editorial', label: 'idEditorial', clear: 'left', disabled: false, rules: [{ required: true, message: 'Campo Requerido' }],widgetProps: { referencia: 'id', endpoint: 'editoriles' }},
         { key: 'stock', label: 'Stock', clear: 'left', disabled: false, rules: [{ required: true, message: 'Campo Requerido' }]},
-        { key: 'precio', label: 'Precio', clear: 'left', disabled: false, rules: [{ required: true, message: 'Campo Requerido' }]}
+        { key: 'precio', label: 'Precio', clear: 'left', disabled: false, rules: [{ required: true, message: 'Campo Requerido' }]},
+        { key: 'autor', label: 'Autor', clear: 'left', disabled: false, rules: [{ required: true, message: 'Campo Requerido' }]}
       ]},
     viewDefinition: viewDefinition,
   }
@@ -42,7 +39,6 @@ const LibrosContainer = props => {
   <EntitiesContainer
     {...props}
     entityDefinition={entityDefinition} />
-    <h1>HOLA</h1>
   </>
     
 }

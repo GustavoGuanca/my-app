@@ -7,7 +7,7 @@ const { Content } = Layout
 const AppContent  = () => 
 <Content>
     <div style = {{padding: 16}}>
-        <section ClassName= 'route-section'>
+        <section className= 'route-section'>
             <AppContentRoutes/>
         </section>
     </div>

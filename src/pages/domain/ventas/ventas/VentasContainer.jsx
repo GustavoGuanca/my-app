@@ -1,5 +1,4 @@
 import { Descriptions } from 'antd'
-import AppEnableTag from '../../../../shared/components/AppEnableTag'
 import EntitiesContainer from '../../../../shared/entities/EntitiesContainer'
 
 const DescItem = Descriptions.Item
@@ -21,15 +20,9 @@ const VentasContainer = props => {
         { title: 'Nombre', dataIndex: 'nombre', key: 'nombre' },
         { title: 'idLibro', dataIndex: ['libros', 'id'], key: 'libro' },
         { title: 'idCliente', dataIndex: ['clientes', 'id'], key: 'cliente' },
-        { title: 'Cantidad', dataIndex: 'cantidad', key: 'cantidad',
-            render: text => <AppEnableTag value={text} />
-        },
-        { title: 'Fecha', dataIndex: 'fecha', key: 'fecha',
-            render: text => <AppEnableTag value={text} />
-        },
-        { title: 'Total', dataIndex: 'total', key: 'total',
-            render: text => <AppEnableTag value={text} />
-        }],
+        { title: 'Cantidad', dataIndex: 'cantidad', key: 'cantidad'},
+        { title: 'Fecha', dataIndex: 'fecha', key: 'fecha'},
+        { title: 'Total', dataIndex: 'total', key: 'total'}],
     formDefinition: {
       columns: 1,
       formItemLayout: null,

@@ -4,6 +4,7 @@ import EntitiesContainer from '../../../../shared/entities/EntitiesContainer'
 const DescItem = Descriptions.Item
 
 const EditorialesContainer = props => {
+  
   const viewDefinition = entidad =>
     entidad && <DescItem label="Nombre"> {entidad.name} </DescItem>
 

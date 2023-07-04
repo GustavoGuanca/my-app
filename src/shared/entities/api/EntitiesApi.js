@@ -7,8 +7,10 @@ const EntitiesApi = {
     console.log(url)
     return Request.get(url)
       .then(response => { 
+      console.log('RESPONSE: ', response)  
         return response.data })
       .catch(error => { 
+        console.log('Error: ', error)
         throw error })
   },
   save: (endpoint, data) => {

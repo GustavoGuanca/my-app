@@ -59,12 +59,12 @@ axios.interceptors.request.use(config => {
   config.headers.mode = "cors"
   config.headers['Access-Control-Origin'] = 'http://localhost:3000'
   config.headers['Access-Control-Allow-Headers'] = 'Content-Type'
-  if (AppAuthenticationHelper.isJwtTokenStored()) {
-      config.headers['Access-Control-Allow-Credentials'] = "*"
-      config.headers['Control-Allow-Credentials'] = true
-      config.headers['withCredentials'] = true
-      config.headers.Authorization = `Bearer ${AppAuthenticationHelper.getJwtToken()}`
-    }
+  // if (AppAuthenticationHelper.isJwtTokenStored()) {
+  //     config.headers['Access-Control-Allow-Credentials'] = "*"
+  //     config.headers['Control-Allow-Credentials'] = true
+  //     config.headers['withCredentials'] = true
+  //     config.headers.Authorization = `Bearer ${AppAuthenticationHelper.getJwtToken()}`
+  //   }
     return config
   }
 )
