@@ -6,11 +6,12 @@ const DescItem = Descriptions.Item
 const LibrosContainer = props => {
   const viewDefinition = entidad =>
     entidad && <>
-      <DescItem label="Nombre"> {entidad.name} </DescItem>
-      <DescItem label="idGenero"> {entidad.generos.id} </DescItem>
-      <DescItem label="idEditorial"> {entidad.editoriales.id} </DescItem>
+      <DescItem label="Nombre"> {entidad.nombre} </DescItem>
+      <DescItem label="idGenero"> {entidad.idGenero} </DescItem>
+      <DescItem label="idEditorial"> {entidad.idEditorial} </DescItem>
       <DescItem label="Stock"> {entidad.stock} </DescItem>
       <DescItem label="Precio"> {entidad.precio} </DescItem>
+      <DescItem label="Autor"> {entidad.autor} </DescItem>
     </> 
  
     const entityDefinition = {
@@ -27,8 +28,8 @@ const LibrosContainer = props => {
       formItemLayout: null,
       fields: [
         { key: 'nombre', label: 'Nombre', clear: 'left', disabled: false, rules: [{ required: true, message: 'Campo Requerido' }],},
-        { key: 'genero', label: 'idGenero', clear: 'left', disabled: false, rules: [{ required: true, message: 'Campo Requerido' }],widgetProps: { referencia: 'id', endpoint: 'generos' }},
-        { key: 'editorial', label: 'idEditorial', clear: 'left', disabled: false, rules: [{ required: true, message: 'Campo Requerido' }],widgetProps: { referencia: 'id', endpoint: 'editoriles' }},
+        { key: 'idGenero', label: 'idGenero', clear: 'left', disabled: false, rules: [{ required: true, message: 'Campo Requerido' }],},
+        { key: 'idEditorial', label: 'idEditorial', clear: 'left', disabled: false, rules: [{ required: true, message: 'Campo Requerido' }]},
         { key: 'stock', label: 'Stock', clear: 'left', disabled: false, rules: [{ required: true, message: 'Campo Requerido' }]},
         { key: 'precio', label: 'Precio', clear: 'left', disabled: false, rules: [{ required: true, message: 'Campo Requerido' }]},
         { key: 'autor', label: 'Autor', clear: 'left', disabled: false, rules: [{ required: true, message: 'Campo Requerido' }]}

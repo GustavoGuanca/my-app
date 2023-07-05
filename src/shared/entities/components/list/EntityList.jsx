@@ -28,7 +28,7 @@ const EntityList = props => {
             {
                 key: 'actions', align: 'right', render: (text, record) => {
                     return <space size='small'>
-                        <AppViewButton onClick={() => {
+                        <AppViewButton onClick={() => { 
                             setCurrentItem(record)
                             setShowItem(true)
                         }} />
@@ -36,7 +36,8 @@ const EntityList = props => {
                             setCurrentItem(record)
                             navigate(location.pathname + '/edit/' + record.id)
                         }} />
-                        <AppDeleteButton title='¿Está seguro que desea eliminar el registro?' onConfirm={() => deleteEtidad(record)}
+                        <AppDeleteButton title='¿Está seguro que desea eliminar el registro?' 
+                            onConfirm={() => deleteEntidad(record)}
                         />
                     </space>
                 }
@@ -55,10 +56,10 @@ const EntityList = props => {
     }
 
 
-    const deleteEtidad = record => {
+    const deleteEntidad = record => {
         setWorking(true)
         EntitiesApi.delete(props.entityDefinition.metadata.endpoint, record.id)
-            .then(responde => {
+            .then(response => {
                 setWorking(false)
                 loadEntidades()
             })

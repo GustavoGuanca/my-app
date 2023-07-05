@@ -7,7 +7,8 @@ const AppViewButton = props =>
             type='primary'
             shape='circle'
             size='small'
-            icon={props.icon ? props.icon : <EyeOutlined/>}/>
+            icon={props.icon ? props.icon : <EyeOutlined/>}
+            onClick={props.onClick} />
     </Tooltip>
 
 export default AppViewButton

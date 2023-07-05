@@ -1,10 +1,11 @@
 import { Card, Drawer, Descriptions } from 'antd'
 
-const EntityView = props =>
-<Drawer
+const EntityView = props => {
+    console.log("EntityView...")
+return <Drawer
     title={`${props.metadata.entidad}:`}
     placement='right'
-    closable={false}
+    closable={true}
     open={props.open}
     onClose={props.onClose}
     width={550}>
@@ -14,5 +15,7 @@ const EntityView = props =>
         </Descriptions>
     </Card>
 </Drawer>
+
+}
 
 export default EntityView

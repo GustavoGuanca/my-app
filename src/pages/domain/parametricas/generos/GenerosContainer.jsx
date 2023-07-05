@@ -5,8 +5,8 @@ const DescItem = Descriptions.Item
 
 const GenerosContainer = props => {
   
-    const viewDefinition = entidad =>
-    entidad && <DescItem label="Nombre"> {entidad.name} </DescItem>
+  const viewDefinition = entidad =>
+    entidad && <DescItem label="Nombre"> {entidad.nombre} </DescItem>
 
     const entityDefinition = {
         metadata: { endpoint: '/generos', modulo: '', entidad: 'Generos', referencia: 'generos' },

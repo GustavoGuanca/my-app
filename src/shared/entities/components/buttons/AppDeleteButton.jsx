@@ -15,7 +15,8 @@ const AppDeleteButton = props =>
             size='small'
             type={props.btnType ? props.btnType : 'primary'}
             icon={props.icon ? props.icon : <DeleteOutlined/>}
-            disabled={props.disabled}/>
+            disabled={props.disabled}
+            onConfirm={props.onConfirm}/>
     </Tooltip>
 </Popconfirm>
 

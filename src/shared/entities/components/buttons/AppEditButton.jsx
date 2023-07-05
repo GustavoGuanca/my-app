@@ -7,7 +7,8 @@ const AppEditButton = props =>
             type='primary'
             shape='circle'
             size='small'
-            icon={props.icon ? props.icon : <EditOutlined/>}/>
+            icon={props.icon ? props.icon : <EditOutlined/>}
+            onClick={props.onClick}/>
     </Tooltip>
 
 export default AppEditButton

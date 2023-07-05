@@ -6,7 +6,7 @@ const DescItem = Descriptions.Item
 const EditorialesContainer = props => {
   
   const viewDefinition = entidad =>
-    entidad && <DescItem label="Nombre"> {entidad.name} </DescItem>
+    entidad && <DescItem label="Nombre"> {entidad.nombre} </DescItem>
 
     const entityDefinition = {
         metadata: { endpoint: '/editoriales', modulo: '', entidad: 'Editoriales', referencia: 'editoriales' },
@@ -20,6 +20,7 @@ const EditorialesContainer = props => {
         ]},
     viewDefinition: viewDefinition,
   }
+
   return <EntitiesContainer
     {...props}
     entityDefinition={entityDefinition} />

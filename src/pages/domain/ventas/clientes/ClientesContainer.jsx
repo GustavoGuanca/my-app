@@ -7,22 +7,29 @@ const DescItem = Descriptions.Item
 const ClientesContainer = props => {
 
   const viewDefinition = entidad =>
-    entidad && <DescItem label="Nombre"> {entidad.name} </DescItem>
+    entidad && 
+    <>
+      <DescItem label="Nombre"><b>{entidad.nombre}</b> </DescItem>
+      <DescItem label="Apellido"><b>{entidad.apellido}</b> </DescItem>
+      <DescItem label="Dni"><b>{entidad.dni}</b> </DescItem>
+      <DescItem label="Direccion"><b>{entidad.direccion}</b> </DescItem>
+    </> 
 
   const entityDefinition = {
-    metadata: { endpoint: '/cliente', modulo: '', entidad: 'Cliente', referencia: 'cliente'},
+    metadata: { endpoint: '/clientes', modulo: '', entidad: 'Clientes', referencia: 'clientes'},
     columns: [
-      { title: 'Nombre', dataIndex: 'name', key: 'name' },
-      { title: 'CategoriaIva', dataIndex: ['categoriaiva', 'name'], key: 'categoriaiva' },
-      { title: 'Estado', dataIndex: 'estado', key: 'estado' }],
+      { title: 'Nombre', dataIndex: 'nombre', key: 'nombre' },
+      { title: 'Apellido', dataIndex: 'apellido', key: 'apellido' },
+      { title: 'Dni', dataIndex: 'dni', key: 'dni' },
+      { title: 'Direccion', dataIndex: 'direccion', key: 'direccion' }],
     formDefinition: {
       columns: 1,
       formItemLayout: null,
       fields: [
-        { key: 'name', label: 'Nombre', clear: 'left', disabled: false },
-        { key: 'categoriaiva_id', label: 'CategoriaIva', widget: SelectItem,
-        rules: [{ required: true, message: 'Campo Requerido' }],
-        widgetProps: { referencia: 'categoriaiva_id', endpoint: 'categoriaiva' } }
+        { key: 'nombre', label: 'Nombre', clear: 'left', disabled: false },
+        { key: 'apellido', label: 'Apellido', clear: 'left', disabled: false },
+        { key: 'dni', label: 'Dni', clear: 'left', disabled: false },
+        { key: 'direccion', label: 'Direccion', clear: 'left', disabled: false },
       ]},
     viewDefinition: viewDefinition,
   }
